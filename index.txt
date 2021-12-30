@@ -1,0 +1,35 @@
+//adding env variable
+
+pipeline {
+agent{
+node {
+	label "master"
+	
+}
+}
+
+	environment {
+					NAME = "Shivkumar"
+					PLACE = "nashik"
+			}
+			
+			stages {
+					stage ("NAME") {
+						
+						steps{
+								echo "${NAME}"
+						}
+					
+					}
+					
+					stage ("PLACE") {
+						
+						steps{
+								echo "${PLACE}"
+						}
+					
+					}
+			}
+			
+			}
+	
